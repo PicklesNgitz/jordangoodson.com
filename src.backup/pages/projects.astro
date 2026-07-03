@@ -1,0 +1,52 @@
+<!-- projects.astro -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Jordan Goodson</title>
+  <meta name="description" content="Production AI systems: autonomous agent platforms, RAG knowledge assistants, ticket triage, content pipelines, and business reporting automation.">
+  <link rel="stylesheet" href="/src/styles/global.css">
+</head>
+<body>
+  <Header />
+
+  <section class="projects">
+    <div class="container">
+      <h2>Selected Projects</h2>
+      <div class="project-grid">
+        <ProjectCard
+          title="Obassi / Hiveforge — Autonomous AI Platform"
+          description="Self-hosted autonomous AI platform: planner→helpers→synthesizer LLM loop, autonomous multi-task crew board, bench-driven model router, tiered memory, and an hourly self-auditing agent that files its own improvement tasks."
+          metrics="1,973 automated tests · 6-scanner self-audit loop · Prompt-injection screening at every LLM boundary"
+          tech="Python · FastAPI · SQLite FTS5 + sqlite-vec · Ollama · Anthropic API"
+          anchor="obassi"
+        />
+        <ProjectCard
+          title="Multi-Agent Blog Content Pipeline"
+          description="End-to-end editorial automation: scraper agent surfaces trending topics, analysis agent synthesizes angles, generation agent drafts, a simulated audience panel scores drafts, and the top 30% publish with AI-selected imagery — minimal human intervention."
+          metrics="Replaced a fully manual editorial workflow · Audience-panel scoring selects top 30% of drafts · Runs end-to-end: research → draft → review → publish"
+          tech="Multi-Agent · LLM Orchestration · Web Scraping · CMS Automation"
+          anchor="content-pipeline"
+        />
+        <ProjectCard
+          title="AI-Powered Ticket Triage & Routing"
+          description="AI-assisted support triage using a local LLM: reviews incoming tickets against historical data, surfaces relevant solution tickets and documentation in-ticket, and reclassifies type, board, and priority before assignment."
+          metrics="Solution candidates surfaced in-ticket, automatically · Auto-reclassification before an engineer ever opens it · Extending to skills-based auto-routing"
+          tech="Local LLM · RAG · ConnectWise · ITGlue"
+          anchor="ticket-triage"
+        />
+        <ProjectCard
+          title="Quarterly Business Review Automation"
+          description="Claude + Microsoft Fabric pipeline that turns raw ticket metrics from Power BI into client-ready narrative QBR reports with charts — distributed automatically by email and Teams, with on-demand generation via a Copilot agent."
+          metrics="Quarterly reports generated and distributed hands-free · On-demand ad hoc QBRs from a Copilot agent · Raw metrics → client-ready narrative, automatically"
+          tech="Claude · Microsoft Fabric · Power BI · Copilot Studio"
+          anchor="qbr"
+        />
+      </div>
+      <a href="/projects">All projects →</a>
+    </div>
+  </section>
+
+  <Footer />
+</body>
+</html>

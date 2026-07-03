@@ -1,0 +1,32 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = '404 - Page Not Found';
+---
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <link rel="stylesheet" href="/src/styles/global.css">
+</head>
+<body>
+  <Header />
+
+  <section class="hero" style="padding: 6rem 2rem; text-align: center;">
+    <div class="container">
+      <h1 style="font-size: 4rem; margin-bottom: 1rem;">404</h1>
+      <p class="lead" style="color: var(--text-body); font-size: 1.5rem; margin-bottom: 2rem;">
+        Page not found
+      </p>
+      <a href="/" style="display: inline-block; background: var(--accent); color: white; padding: 1rem 2rem; border-radius: var(--radius); font-weight: 600; text-decoration: none;">
+        Back to Home
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</body>
+</html>

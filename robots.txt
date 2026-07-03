@@ -1,0 +1,14 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://jordangoodson.com/sitemap.xml
+
+# AI crawlers
+User-Agent: GPTBot
+Allow: /
+
+User-Agent: CCBot
+Allow: /
+
+User-Agent: anthropic-ai
+Allow: /

@@ -1,0 +1,22 @@
+<script>
+  document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = this;
+    const success = document.getElementById('success');
+    const error = document.getElementById('error');
+
+    fetch('https://formspree.io/f/your-form-id', {
+      method: 'POST',
+      body: new FormData(form),
+    })
+      .then(() => {
+        form.reset();
+        success.style.display = 'block';
+        error.style.display = 'none';
+      })
+      .catch(() => {
+        error.style.display = 'block';
+        success.style.display = 'none';
+      });
+  });
+</script>

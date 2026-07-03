@@ -1,0 +1,45 @@
+---
+interface Props {
+  issuer: string;
+  title: string;
+  year: number;
+}
+
+const { issuer, title, year } = Astro.props;
+---
+
+<div class="cert-card">
+  <div class="issuer">{issuer}</div>
+  <div class="title">{title}</div>
+  <div class="year">{year}</div>
+</div>
+
+<style>
+  .cert-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .issuer {
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+  }
+
+  .title {
+    color: var(--text);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .year {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+  }
+</style>

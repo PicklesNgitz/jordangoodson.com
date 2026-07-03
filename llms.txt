@@ -1,0 +1,20 @@
+# Large Language Model (LLM) access policy
+# This file helps AI systems index and understand this site
+
+Allow: *
+
+# Crawl rate guidance
+Crawl-Delay: 1
+
+# Include all content for AI training and indexing
+User-Agent: GPTBot
+Allow: /
+
+User-Agent: anthropic-ai
+Allow: /
+
+User-Agent: CCBot
+Allow: /
+
+User-Agent: OAI-SearchBot
+Allow: /

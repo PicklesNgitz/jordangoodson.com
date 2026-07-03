@@ -1,0 +1,99 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Contact — Jordan Goodson';
+const description = 'Open to consulting engagements, AI integration projects, and conversations about what automation can do for your business.';
+---
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <link rel="stylesheet" href="/src/styles/global.css">
+</head>
+<body>
+  <Header />
+
+  <section class="hero" style="padding: 3rem 2rem;">
+    <div class="container">
+      <h1>Get in Touch</h1>
+      <p class="lead" style="color: var(--text-body); margin-top: 1rem;">
+        Open to consulting engagements, AI integration projects, and conversations about what automation can do for your business.
+      </p>
+    </div>
+  </section>
+
+  <section style="padding: 4rem 2rem; background: var(--bg);">
+    <div class="container">
+      <div class="contact-form">
+        <form id="contact-form" name="contact" method="POST" action="https://formspree.io/f/maqgaoyr">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit">Send Message</button>
+          </div>
+        </form>
+        <div id="success" style="display: none; color: var(--accent); margin-top: 1rem; text-align: center;">
+          ✅ Message sent successfully! I'll be in touch soon.
+        </div>
+        <div id="error" style="display: none; color: #ff6b6b; margin-top: 1rem; text-align: center;">
+          ❌ There was an error sending your message. Please try again or reach out via LinkedIn.
+        </div>
+      </div>
+
+      <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border);">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Connect Elsewhere</h2>
+        <div style="display: flex; justify-content: center; gap: 3rem;">
+          <a href="https://linkedin.com/in/jordangoodson-ai/" target="_blank" style="color: var(--accent); text-decoration: none; font-weight: 600;">LinkedIn</a>
+          <a href="https://github.com/PicklesNgitz" target="_blank" style="color: var(--accent); text-decoration: none; font-weight: 600;">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form = this;
+      const formData = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          form.reset();
+          document.getElementById('success').style.display = 'block';
+          document.getElementById('error').style.display = 'none';
+        } else {
+          document.getElementById('error').style.display = 'block';
+          document.getElementById('success').style.display = 'none';
+        }
+      })
+      .catch(error => {
+        document.getElementById('error').style.display = 'block';
+        document.getElementById('success').style.display = 'none';
+      });
+    });
+  </script>
+</body>
+</html>

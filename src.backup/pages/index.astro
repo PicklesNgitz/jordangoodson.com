@@ -1,0 +1,147 @@
+<!-- index.astro - Home Page -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jordan Goodson - AI Integration & Automation Engineer</title>
+  <meta name="description" content="AI integration and automation engineering for small and medium business. Multi-agent systems, RAG pipelines, and LLM-powered automation — built, shipped, and measured. Atlanta, GA.">
+  <link rel="stylesheet" href="/src/styles/global.css">
+</head>
+<body>
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Jordan Goodson</h1>
+      <p class="role">AI Integration & Automation Engineer</p>
+      <p class="lead">
+        I build AI systems that run businesses — multi-agent pipelines, RAG knowledge assistants, and LLM-powered automation that replace manual workflows and deliver measurable results. Not proofs-of-concept. Production systems, in production, doing real work.
+      </p>
+    </div>
+  </section>
+
+  <!-- Depth Statement -->
+  <section class="depth">
+    <div class="container">
+      <p class="depth-text">
+        The résumé reads broad — networking, security, cloud, automation, AI. The work reads deep: production systems and measurable outcomes in every one of those domains. Breadth is how I see the whole business. Depth is why the systems I ship stay shipped.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills Teaser -->
+  <section class="skills-teaser">
+    <div class="container">
+      <h2>Core Competencies</h2>
+      <div class="tag-groups">
+        <div class="tag-group">
+          <h3>GenAI & Agent Systems</h3>
+          <div class="tags">
+            <span>LangChain</span> <span>LangGraph</span> <span>RAG Pipelines</span> <span>Multi-Agent Orchestration</span> <span>Prompt Engineering</span> <span>Vector Search</span> <span>Evaluation Frameworks</span>
+          </div>
+        </div>
+        <div class="tag-group">
+          <h3>Cloud & AI Platforms</h3>
+          <div class="tags">
+            <span>AWS Bedrock</span> <span>GCP Vertex AI</span> <span>Azure OpenAI</span> <span>Microsoft Azure</span> <span>M365 Copilot</span> <span>Copilot Studio</span> <span>Microsoft Fabric</span>
+          </div>
+        </div>
+        <div class="tag-group">
+          <h3>Development & Ops</h3>
+          <div class="tags">
+            <span>Python</span> <span>TypeScript</span> <span>SQL</span> <span>FastAPI</span> <span>REST APIs</span> <span>Docker</span> <span>CI/CD</span>
+          </div>
+        </div>
+        <div class="tag-group">
+          <h3>Infrastructure & Security</h3>
+          <div class="tags">
+            <span>Cloud Migrations</span> <span>Entra ID</span> <span>Network Security</span> <span>VMware</span> <span>Hyper-V</span> <span>Proxmox</span> <span>PII Protection</span>
+          </div>
+        </div>
+      </div>
+      <a href="/skills">Full skills & proficiency →</a>
+    </div>
+  </section>
+
+  <!-- Selected Projects -->
+  <section class="projects">
+    <div class="container">
+      <h2>Selected Projects</h2>
+      <div class="project-grid">
+        <!-- Project 1 -->
+        <ProjectCard
+          title="Obassi / Hiveforge — Autonomous AI Platform"
+          description="Self-hosted autonomous AI platform: planner→helpers→synthesizer LLM loop, autonomous multi-task crew board, bench-driven model router, tiered memory, and an hourly self-auditing agent that files its own improvement tasks."
+          metrics="1,973 automated tests · 6-scanner self-audit loop · Prompt-injection screening at every LLM boundary"
+          tech="Python · FastAPI · SQLite FTS5 + sqlite-vec · Ollama · Anthropic API"
+          anchor="obassi"
+        />
+        <!-- Project 2 -->
+        <ProjectCard
+          title="Multi-Agent Blog Content Pipeline"
+          description="End-to-end editorial automation: scraper agent surfaces trending topics, analysis agent synthesizes angles, generation agent drafts, a simulated audience panel scores drafts, and the top 30% publish with AI-selected imagery — minimal human intervention."
+          metrics="Replaced a fully manual editorial workflow · Audience-panel scoring selects top 30% of drafts · Runs end-to-end: research → draft → review → publish"
+          tech="Multi-Agent · LLM Orchestration · Web Scraping · CMS Automation"
+          anchor="content-pipeline"
+        />
+        <!-- Project 3 -->
+        <ProjectCard
+          title="AI-Powered Ticket Triage & Routing"
+          description="AI-assisted support triage using a local LLM: reviews incoming tickets against historical data, surfaces relevant solution tickets and documentation in-ticket, and reclassifies type, board, and priority before assignment."
+          metrics="Solution candidates surfaced in-ticket, automatically · Auto-reclassification before an engineer ever opens it · Extending to skills-based auto-routing"
+          tech="Local LLM · RAG · ConnectWise · ITGlue"
+          anchor="ticket-triage"
+        />
+        <!-- Project 4 -->
+        <ProjectCard
+          title="Quarterly Business Review Automation"
+          description="Claude + Microsoft Fabric pipeline that turns raw ticket metrics from Power BI into client-ready narrative QBR reports with charts — distributed automatically by email and Teams, with on-demand generation via a Copilot agent."
+          metrics="Quarterly reports generated and distributed hands-free · On-demand ad hoc QBRs from a Copilot agent · Raw metrics → client-ready narrative, automatically"
+          tech="Claude · Microsoft Fabric · Power BI · Copilot Studio"
+          anchor="qbr"
+        />
+      </div>
+      <a href="/projects">All projects →</a>
+    </div>
+  </section>
+
+  <!-- Certifications Teaser -->
+  <section class="certifications">
+    <div class="container">
+      <h2>Certifications</h2>
+      <div class="cert-cards">
+        <div class="cert-card">
+          <div class="issuer">MICROSOFT</div>
+          <div class="title">Security Administrator Associate</div>
+          <div class="year">2025</div>
+        </div>
+        <div class="cert-card">
+          <div class="issuer">MICROSOFT</div>
+          <div class="title">Azure Administrator Associate</div>
+          <div class="year">2025</div>
+        </div>
+        <div class="cert-card">
+          <div class="issuer">ANTHROPIC</div>
+          <div class="title">AI Fluency: Framework & Foundations</div>
+          <div class="year">2025</div>
+        </div>
+      </div>
+      <a href="/skills#certifications">All certifications →</a>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section class="cta">
+    <div class="container">
+      <h2>Let's connect.</h2>
+      <p>
+        Open to consulting engagements, AI integration projects, and conversations about what automation can do for your business.
+      </p>
+      <a href="/contact">Get in touch →</a>
+    </div>
+  </section>
+
+  <Footer />
+</body>
+</html>

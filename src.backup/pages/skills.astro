@@ -1,0 +1,75 @@
+<!-- skills.astro -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills — Jordan Goodson</title>
+  <meta name="description" content="Production systems and measurable outcomes in every one of those domains. Breadth is how I see the whole business. Depth is why the systems I ship stay shipped.">
+  <link rel="stylesheet" href="/src/styles/global.css">
+</head>
+<body>
+  <Header />
+
+  <section class="skills">
+    <div class="container">
+      <SectionHeading eyebrow="EXPERTISE" title="Core Competencies" />
+      <div class="tag-groups">
+        <div class="tag-group">
+          <h3>GenAI & Agent Systems</h3>
+          <div class="tags">
+            <span>LangChain</span> <span>LangGraph</span> <span>RAG Pipelines</span> <span>Multi-Agent Orchestration</span> <span>Prompt Engineering</span> <span>Vector Search</span> <span>Evaluation Frameworks</span>
+          </div>
+        </div>
+        <div class="tag-group">
+          <h3>Cloud & AI Platforms</h3>
+          <div class="tags">
+            <span>AWS Bedrock</span> <span>GCP Vertex AI</span> <span>Azure OpenAI</span> <span>Microsoft Azure</span> <span>M365 Copilot</span> <span>Copilot Studio</span> <span>Microsoft Fabric</span>
+          </div>
+        </div>
+        <div class="tag-group">
+          <h3>Development & Ops</h3>
+          <div class="tags">
+            <span>Python</span> <span>TypeScript</span> <span>SQL</span> <span>FastAPI</span> <span>REST APIs</span> <span>Docker</span> <span>CI/CD</span>
+          </div>
+        </div>
+        <div class="tag-group">
+          <h3>Infrastructure & Security</h3>
+          <div class="tags">
+            <span>Cloud Migrations</span> <span>Entra ID</span> <span>Network Security</span> <span>VMware</span> <span>Hyper-V</span> <span>Proxmox</span> <span>PII Protection</span>
+          </div>
+        </div>
+      </div>
+      <a href="/skills">Full skills & proficiency →</a>
+    </div>
+  </section>
+
+  <section class="certifications">
+    <div class="container">
+      <SectionHeading eyebrow="CREDENTIALS" title="Certifications" />
+      <div class="cert-cards">
+        <div class="cert-card">
+          <div class="issuer">MICROSOFT</div>
+          <div class="title">Security Administrator Associate</div>
+          <div class="year">2025</div>
+          <DotRating />
+        </div>
+        <div class="cert-card">
+          <div class="issuer">MICROSOFT</div>
+          <div class="title">Azure Administrator Associate</div>
+          <div class="year">2025</div>
+          <DotRating />
+        </div>
+        <div class="cert-card">
+          <div class="issuer">ANTHROPIC</div>
+          <div class="title">AI Fluency: Framework & Foundations</div>
+          <div class="year">2025</div>
+          <DotRating />
+        </div>
+      </div>
+      <a href="/skills#certifications">All certifications →</a>
+    </div>
+  </section>
+
+  <Footer />
+</body>
+</html>

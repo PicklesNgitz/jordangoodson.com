@@ -1,0 +1,12 @@
+<!-- ProjectCard.astro -->
+<div class="project-card">
+  <h3 class="title">{title}</h3>
+  <p class="description">{description}</p>
+  <ul class="metrics">
+    <li class="metric">{metrics}</li>
+  </ul>
+  <div class="tech-chips">
+    {tech.split(' ').map(tech => <span class="chip">{tech}</span>)}
+  </div>
+  <a href={`/projects#${anchor}`}>View project →</a>
+</div>
