@@ -18,9 +18,17 @@ const { issuer, title, year } = Astro.props;
   .cert-card {
     background: var(--card);
     border: 1px solid var(--border);
+    border-top: 3px solid var(--accent);
     border-radius: var(--radius);
     padding: 1.5rem;
     text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .cert-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(79, 125, 249, 0.12);
+    border-top-color: var(--accent-2);
   }
 
   .issuer {

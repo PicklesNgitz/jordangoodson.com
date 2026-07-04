@@ -27,14 +27,18 @@ const techArray = tech.split(' · ');
   .project-card {
     background: var(--card);
     border: 1px solid var(--border);
+    border-left: 3px solid transparent;
     border-radius: var(--radius);
     padding: 2rem;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
   }
 
   .project-card:hover {
     background: var(--card-highlight);
     border-color: var(--border-accent);
+    border-left-color: var(--accent);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(79, 125, 249, 0.12);
   }
 
   .title {

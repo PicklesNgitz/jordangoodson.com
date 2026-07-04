@@ -41,7 +41,7 @@ const description = 'AI integration and automation engineering for small and med
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
-      <h1>Jordan Goodson</h1>
+      <h1 class="gradient-text">Jordan Goodson</h1>
       <p class="role">AI Integration & Automation Engineer</p>
       <p class="lead">
         I build AI systems that run businesses — multi-agent pipelines, RAG knowledge assistants, and LLM-powered automation that replace manual workflows and deliver measurable results. Not proofs-of-concept. Production systems, in production, doing real work.
@@ -49,8 +49,16 @@ const description = 'AI integration and automation engineering for small and med
     </div>
   </section>
 
+  <!-- GitHub Activity Strip -->
+  <div class="github-activity" id="github-activity-strip" style="display:none;">
+    <div class="github-activity-inner">
+      <div class="github-activity-label">Recent GitHub Activity</div>
+      <ul class="github-activity-events" id="github-activity-events"></ul>
+    </div>
+  </div>
+
   <!-- Depth Statement -->
-  <section class="depth">
+  <section class="depth fade-up">
     <div class="container">
       <p class="depth-text">
         The résumé reads broad — networking, security, cloud, automation, AI. The work reads deep: production systems and measurable outcomes in every one of those domains. Breadth is how I see the whole business. Depth is why the systems I ship stay shipped.
@@ -59,7 +67,7 @@ const description = 'AI integration and automation engineering for small and med
   </section>
 
   <!-- Skills Teaser -->
-  <section class="skills-teaser">
+  <section class="skills-teaser fade-up">
     <div class="container">
       <h2>Core Competencies</h2>
       <div class="tag-groups">
@@ -95,36 +103,44 @@ const description = 'AI integration and automation engineering for small and med
   <!-- Selected Projects -->
   <section class="projects">
     <div class="container">
-      <h2>Selected Projects</h2>
+      <h2 class="fade-up">Selected Projects</h2>
       <div class="project-grid">
-        <ProjectCard
-          title="Obassi / Hiveforge — Autonomous AI Platform"
-          description="Self-hosted autonomous AI platform: planner→helpers→synthesizer LLM loop, autonomous multi-task crew board, bench-driven model router, tiered memory, and an hourly self-auditing agent that files its own improvement tasks."
-          metrics="1,973 automated tests · 6-scanner self-audit loop · Prompt-injection screening at every LLM boundary"
-          tech="Python · FastAPI · SQLite FTS5 + sqlite-vec · Ollama · Anthropic API"
-          anchor="obassi"
-        />
-        <ProjectCard
-          title="Multi-Agent Blog Content Pipeline"
-          description="End-to-end editorial automation: scraper agent surfaces trending topics, analysis agent synthesizes angles, generation agent drafts, a simulated audience panel scores drafts, and the top 30% publish with AI-selected imagery — minimal human intervention."
-          metrics="Replaced a fully manual editorial workflow · Audience-panel scoring selects top 30% of drafts · Runs end-to-end: research → draft → review → publish"
-          tech="Multi-Agent · LLM Orchestration · Web Scraping · CMS Automation"
-          anchor="content-pipeline"
-        />
-        <ProjectCard
-          title="AI-Powered Ticket Triage & Routing"
-          description="AI-assisted support triage using a local LLM: reviews incoming tickets against historical data, surfaces relevant solution tickets and documentation in-ticket, and reclassifies type, board, and priority before assignment."
-          metrics="Solution candidates surfaced in-ticket, automatically · Auto-reclassification before an engineer ever opens it · Extending to skills-based auto-routing"
-          tech="Local LLM · RAG · ConnectWise · ITGlue"
-          anchor="ticket-triage"
-        />
-        <ProjectCard
-          title="Quarterly Business Review Automation"
-          description="Claude + Microsoft Fabric pipeline that turns raw ticket metrics from Power BI into client-ready narrative QBR reports with charts — distributed automatically by email and Teams, with on-demand generation via a Copilot agent."
-          metrics="Quarterly reports generated and distributed hands-free · On-demand ad hoc QBRs from a Copilot agent · Raw metrics → client-ready narrative, automatically"
-          tech="Claude · Microsoft Fabric · Power BI · Copilot Studio"
-          anchor="qbr"
-        />
+        <div class="fade-up delay-1">
+          <ProjectCard
+            title="Obassi / Hiveforge — Autonomous AI Platform"
+            description="Self-hosted autonomous AI platform: planner→helpers→synthesizer LLM loop, autonomous multi-task crew board, bench-driven model router, tiered memory, and an hourly self-auditing agent that files its own improvement tasks."
+            metrics="1,973 automated tests · 6-scanner self-audit loop · Prompt-injection screening at every LLM boundary"
+            tech="Python · FastAPI · SQLite FTS5 + sqlite-vec · Ollama · Anthropic API"
+            anchor="obassi"
+          />
+        </div>
+        <div class="fade-up delay-2">
+          <ProjectCard
+            title="Multi-Agent Blog Content Pipeline"
+            description="End-to-end editorial automation: scraper agent surfaces trending topics, analysis agent synthesizes angles, generation agent drafts, a simulated audience panel scores drafts, and the top 30% publish with AI-selected imagery — minimal human intervention."
+            metrics="Replaced a fully manual editorial workflow · Audience-panel scoring selects top 30% of drafts · Runs end-to-end: research → draft → review → publish"
+            tech="Multi-Agent · LLM Orchestration · Web Scraping · CMS Automation"
+            anchor="content-pipeline"
+          />
+        </div>
+        <div class="fade-up delay-3">
+          <ProjectCard
+            title="AI-Powered Ticket Triage & Routing"
+            description="AI-assisted support triage using a local LLM: reviews incoming tickets against historical data, surfaces relevant solution tickets and documentation in-ticket, and reclassifies type, board, and priority before assignment."
+            metrics="Solution candidates surfaced in-ticket, automatically · Auto-reclassification before an engineer ever opens it · Extending to skills-based auto-routing"
+            tech="Local LLM · RAG · ConnectWise · ITGlue"
+            anchor="ticket-triage"
+          />
+        </div>
+        <div class="fade-up delay-4">
+          <ProjectCard
+            title="Quarterly Business Review Automation"
+            description="Claude + Microsoft Fabric pipeline that turns raw ticket metrics from Power BI into client-ready narrative QBR reports with charts — distributed automatically by email and Teams, with on-demand generation via a Copilot agent."
+            metrics="Quarterly reports generated and distributed hands-free · On-demand ad hoc QBRs from a Copilot agent · Raw metrics → client-ready narrative, automatically"
+            tech="Claude · Microsoft Fabric · Power BI · Copilot Studio"
+            anchor="qbr"
+          />
+        </div>
       </div>
       <a href="/projects">All projects →</a>
     </div>
@@ -133,18 +149,77 @@ const description = 'AI integration and automation engineering for small and med
   <!-- Certifications Teaser -->
   <section class="certifications">
     <div class="container">
-      <h2>Certifications</h2>
+      <h2 class="fade-up">Certifications</h2>
       <div class="cert-cards">
-        <CertCard issuer="MICROSOFT" title="Security Administrator Associate" year={2025} />
-        <CertCard issuer="MICROSOFT" title="Azure Administrator Associate" year={2025} />
-        <CertCard issuer="ANTHROPIC" title="AI Fluency: Framework & Foundations" year={2025} />
+        <div class="fade-up delay-1"><CertCard issuer="MICROSOFT" title="Security Administrator Associate" year={2025} /></div>
+        <div class="fade-up delay-2"><CertCard issuer="MICROSOFT" title="Azure Administrator Associate" year={2025} /></div>
+        <div class="fade-up delay-3"><CertCard issuer="ANTHROPIC" title="AI Fluency: Framework & Foundations" year={2025} /></div>
       </div>
       <a href="/skills#certifications">All certifications →</a>
     </div>
   </section>
 
+  <!-- AI Pipeline Visualization -->
+  <section class="ai-pipeline-section fade-up">
+    <div class="container">
+      <h2>Inside an AI System</h2>
+      <p class="ai-pipeline-subtitle">
+        How I architect multi-agent pipelines — from raw data to actionable output.
+        This reflects the real architecture behind Obassi/Hiveforge.
+      </p>
+
+      <div class="pipeline-track">
+        <div class="pipeline-node">
+          <div class="pipeline-node-label">Input</div>
+          <div class="pipeline-node-title">Data Sources</div>
+          <p class="pipeline-node-desc">Tickets, docs, APIs, web feeds</p>
+        </div>
+
+        <div class="pipeline-connector"></div>
+
+        <div class="pipeline-node">
+          <div class="pipeline-node-label">Agent</div>
+          <div class="pipeline-node-title">Ingestion Agent</div>
+          <p class="pipeline-node-desc">Scrapes, cleans, chunks incoming data</p>
+        </div>
+
+        <div class="pipeline-connector delay-1"></div>
+
+        <div class="pipeline-node">
+          <div class="pipeline-node-label">Memory</div>
+          <div class="pipeline-node-title">RAG / Vector Store</div>
+          <p class="pipeline-node-desc">Embeds chunks, retrieves by semantic similarity</p>
+        </div>
+
+        <div class="pipeline-connector delay-2"></div>
+
+        <div class="pipeline-node">
+          <div class="pipeline-node-label">Orchestrator</div>
+          <div class="pipeline-node-title">LLM Planner</div>
+          <p class="pipeline-node-desc">Decomposes task, routes to specialist agents</p>
+        </div>
+
+        <div class="pipeline-connector delay-3"></div>
+
+        <div class="pipeline-node">
+          <div class="pipeline-node-label">Output</div>
+          <div class="pipeline-node-title">Synthesizer</div>
+          <p class="pipeline-node-desc">Aggregates results, generates final response</p>
+        </div>
+      </div>
+
+      <div class="pipeline-stats">
+        <div class="pipeline-stat-chip">1,973 automated tests</div>
+        <div class="pipeline-stat-chip">6-scanner self-audit loop</div>
+        <div class="pipeline-stat-chip">Prompt-injection screening at every LLM boundary</div>
+      </div>
+
+      <a href="/projects#obassi" class="pipeline-cta-link">Based on a real system I built →</a>
+    </div>
+  </section>
+
   <!-- CTA Band -->
-  <section class="cta">
+  <section class="cta fade-up">
     <div class="container">
       <h2>Let's connect.</h2>
       <p>
@@ -155,5 +230,79 @@ const description = 'AI integration and automation engineering for small and med
   </section>
 
   <Footer />
+
+<script>
+  (function () {
+    const strip = document.getElementById('github-activity-strip');
+    const list = document.getElementById('github-activity-events');
+
+    const EVENT_MAP = {
+      PushEvent:        { icon: '↑', label: 'pushed to' },
+      CreateEvent:      { icon: '+', label: 'created' },
+      PullRequestEvent: { icon: '⇄', label: 'PR on' },
+      IssuesEvent:      { icon: '!', label: 'issue on' },
+      WatchEvent:       { icon: '★', label: 'starred' },
+      ForkEvent:        { icon: '⑂', label: 'forked' },
+    };
+
+    function timeAgo(dateStr) {
+      const diff = Math.floor((Date.now() - new Date(dateStr).getTime()) / 1000);
+      if (diff < 60)   return 'just now';
+      if (diff < 3600) return Math.floor(diff / 60) + 'm ago';
+      if (diff < 86400) return Math.floor(diff / 3600) + 'h ago';
+      return Math.floor(diff / 86400) + 'd ago';
+    }
+
+    function repoName(fullName) {
+      return fullName.split('/')[1] || fullName;
+    }
+
+    fetch('https://api.github.com/users/PicklesNgitz/events?per_page=10')
+      .then(function (res) {
+        if (!res.ok) throw new Error('non-ok');
+        return res.json();
+      })
+      .then(function (events) {
+        const known = events.filter(function (e) {
+          return EVENT_MAP[e.type];
+        }).slice(0, 5);
+
+        if (known.length === 0) return;
+
+        known.forEach(function (e) {
+          const meta = EVENT_MAP[e.type];
+          const li = document.createElement('li');
+          li.className = 'github-event-pill';
+          li.innerHTML =
+            '<span class="event-icon">' + meta.icon + '</span>' +
+            '<span class="event-action">' + meta.label + '</span>' +
+            '<span class="event-repo">' + repoName(e.repo.name) + '</span>' +
+            '<span class="event-time">' + timeAgo(e.created_at) + '</span>';
+          list.appendChild(li);
+        });
+
+        strip.style.display = '';
+      })
+      .catch(function () {
+        /* silently hide on any error */
+      });
+  })();
+</script>
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  document.querySelectorAll('.fade-up').forEach((el) => observer.observe(el));
+</script>
 </body>
 </html>
