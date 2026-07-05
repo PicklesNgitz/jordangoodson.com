@@ -392,6 +392,7 @@ section {
 .fade-up.delay-2 { transition-delay: 160ms; }
 .fade-up.delay-3 { transition-delay: 240ms; }
 .fade-up.delay-4 { transition-delay: 320ms; }
+.fade-up.delay-5 { transition-delay: 400ms; }
 
 /* GitHub Activity Strip */
 .github-activity {
