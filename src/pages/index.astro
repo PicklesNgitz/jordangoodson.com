@@ -16,6 +16,14 @@ const description = 'AI integration and automation engineering for small and med
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{title}</title>
   <meta name="description" content={description}>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta name="theme-color" content="#05070D">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Jordan Goodson">
+  <meta name="twitter:card" content="summary">
+  <meta property="og:title" content="Jordan Goodson — AI Integration & Automation Engineer">
+  <meta property="og:description" content="Multi-agent pipelines, RAG assistants, and LLM automation — shipped, measured, in production.">
+  <meta property="og:url" content="https://jordangoodson.com/">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -40,12 +48,29 @@ const description = 'AI integration and automation engineering for small and med
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="container">
-      <h1 class="gradient-text">Jordan Goodson</h1>
-      <p class="role">AI Integration & Automation Engineer</p>
-      <p class="lead">
-        I build AI systems that run businesses — multi-agent pipelines, RAG knowledge assistants, and LLM-powered automation that replace manual workflows and deliver measurable results. Not proofs-of-concept. Production systems, in production, doing real work.
-      </p>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="hero-eyebrow">Jordan Goodson — AI Integration & Automation Engineer</p>
+        <h1>AI systems that run businesses<span class="accent-dot">.</span></h1>
+        <p class="lead">
+          Multi-agent pipelines, RAG knowledge assistants, and LLM-powered automation — shipped, measured, and doing real work in production. Not proofs-of-concept.
+        </p>
+        <div class="hero-actions">
+          <a href="/projects" class="btn">See the work</a>
+          <a href="/contact" class="btn btn-ghost">Contact</a>
+        </div>
+      </div>
+      <div class="hero-trace" aria-hidden="true">
+        <div class="trace-header">run.log — qbr-pipeline</div>
+        <div class="trace-body">
+          <p class="trace-line">$ obassi run --task "quarterly business review"</p>
+          <p class="trace-line"><span class="t-step">▸ planner</span><span class="t-desc">decomposed → 4 subtasks</span><span class="t-val">1.2s</span></p>
+          <p class="trace-line"><span class="t-step">▸ helpers ×4</span><span class="t-desc">retrieval · draft · charts</span><span class="t-val">3.8s</span></p>
+          <p class="trace-line"><span class="t-step">▸ synthesizer</span><span class="t-desc">merged results → report</span><span class="t-val">0.9s</span></p>
+          <p class="trace-line"><span class="t-step">▸ self-audit</span><span class="t-desc">6 scanners · injection screen</span><span class="t-val">pass</span></p>
+          <p class="trace-line t-done"><span class="t-step">✓ delivered</span><span class="t-desc">email + teams</span><span class="t-val">6.1s</span></p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -69,6 +94,7 @@ const description = 'AI integration and automation engineering for small and med
   <!-- Skills Teaser -->
   <section class="skills-teaser fade-up">
     <div class="container">
+      <p class="trace-tag">skills.map</p>
       <h2>Core Competencies</h2>
       <div class="tag-groups">
         <div class="tag-group">
@@ -103,6 +129,7 @@ const description = 'AI integration and automation engineering for small and med
   <!-- Selected Projects -->
   <section class="projects">
     <div class="container">
+      <p class="trace-tag fade-up">projects.log</p>
       <h2 class="fade-up">Selected Projects</h2>
       <div class="project-grid">
         <div class="fade-up delay-1">
@@ -149,6 +176,7 @@ const description = 'AI integration and automation engineering for small and med
   <!-- Certifications Teaser -->
   <section class="certifications">
     <div class="container">
+      <p class="trace-tag fade-up">certs.verified</p>
       <h2 class="fade-up">Certifications</h2>
       <div class="cert-cards">
         <div class="fade-up delay-1"><CertCard issuer="MICROSOFT" title="Security Administrator Associate" year={2025} /></div>
@@ -162,6 +190,7 @@ const description = 'AI integration and automation engineering for small and med
   <!-- AI Pipeline Visualization -->
   <section class="ai-pipeline-section fade-up">
     <div class="container">
+      <p class="trace-tag">architecture.trace</p>
       <h2>Inside an AI System</h2>
       <p class="ai-pipeline-subtitle">
         How I architect multi-agent pipelines — from raw data to actionable output.

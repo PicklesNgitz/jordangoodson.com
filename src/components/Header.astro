@@ -3,7 +3,9 @@
 
 <header class="header">
   <div class="container">
-    <a href="/" class="logo">Jordan Goodson</a>
+    <a href="/" class="logo"><span class="logo-mark">JG</span><span class="logo-name">Jordan Goodson</span></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+    <label for="nav-toggle" class="nav-burger" aria-hidden="true"><span></span><span></span><span></span></label>
     <nav class="nav">
       <a href="/">Bio</a>
       <a href="/skills">Skills</a>
@@ -33,13 +35,28 @@
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 2rem;
+    position: relative;
   }
 
   .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
     font-weight: 700;
     color: var(--text);
     text-decoration: none;
     font-size: 1.25rem;
+  }
+
+  .logo-mark {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.25rem 0.45rem;
+    background: var(--card);
   }
 
   .nav {
@@ -58,17 +75,50 @@
     color: var(--accent);
   }
 
+  .nav-toggle { display: none; }
+  .nav-burger { display: none; }
+
   @media (max-width: 768px) {
     .header .container {
       padding: 0 1rem;
     }
 
+    .nav-burger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .nav-burger span {
+      width: 22px;
+      height: 2px;
+      background: var(--text);
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
     .nav {
-      gap: 1rem;
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      gap: 0;
+      background: var(--bg-raised);
+      border-bottom: 1px solid var(--border);
+      padding: 0.5rem 0;
     }
 
     .nav a {
-      font-size: 0.85rem;
+      padding: 0.9rem 1.5rem;
+      font-size: 1rem;
     }
+
+    .nav-toggle:checked ~ .nav { display: flex; }
+    .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+    .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   }
 </style>
