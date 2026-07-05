@@ -273,11 +273,17 @@ const description = 'AI integration and automation engineering for small and med
           const meta = EVENT_MAP[e.type];
           const li = document.createElement('li');
           li.className = 'github-event-pill';
-          li.innerHTML =
-            '<span class="event-icon">' + meta.icon + '</span>' +
-            '<span class="event-action">' + meta.label + '</span>' +
-            '<span class="event-repo">' + repoName(e.repo.name) + '</span>' +
-            '<span class="event-time">' + timeAgo(e.created_at) + '</span>';
+          [
+            ['event-icon', meta.icon],
+            ['event-action', meta.label],
+            ['event-repo', repoName(e.repo.name)],
+            ['event-time', timeAgo(e.created_at)],
+          ].forEach(function (pair) {
+            const span = document.createElement('span');
+            span.className = pair[0];
+            span.textContent = pair[1];
+            li.appendChild(span);
+          });
           list.appendChild(li);
         });
 
@@ -290,6 +296,8 @@ const description = 'AI integration and automation engineering for small and med
 </script>
 
 <script>
+  document.documentElement.classList.add('js');
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
