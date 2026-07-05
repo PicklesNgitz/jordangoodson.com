@@ -809,4 +809,9 @@ section {
   }
 
   .trace-line { opacity: 1; }
+
+  .pipeline-connector::after {
+    animation-duration: 2.4s !important;
+    animation-iteration-count: infinite !important;
+  }
 }
