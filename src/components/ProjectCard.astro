@@ -5,9 +5,10 @@ interface Props {
   metrics: string;
   tech: string;
   anchor: string;
+  showLink?: boolean;
 }
 
-const { title, description, metrics, tech, anchor } = Astro.props;
+const { title, description, metrics, tech, anchor, showLink = true } = Astro.props;
 const techArray = tech.split(' · ');
 ---
 
@@ -20,7 +21,7 @@ const techArray = tech.split(' · ');
   <div class="tech-chips">
     {techArray.map((t) => <span class="chip">{t}</span>)}
   </div>
-  <a href={`/projects#${anchor}`} class="link">View project →</a>
+  {showLink && <a href={`/projects#${anchor}`} class="link">View project →</a>}
 </div>
 
 <style>
